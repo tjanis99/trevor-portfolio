@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Trevor Janis</title>
+    <!-- Bootstrap 5.0 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts (Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #F4F4F8; color: #2F3E46; }
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .navbar-brand, .nav-link { color: #2F3E46 !important; }
+        .nav-link.active { font-weight: bold; color: #007BFF !important; }
+        .page-header { padding: 60px 0; background-color: #ffffff; margin-bottom: 40px;}
+        .project-card { transition: transform 0.3s ease, box-shadow 0.3s ease; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 8px 15px rgba(0,0,0,0.15); }
+        .btn-primary { background-color: #007BFF; border-color: #007BFF; transition: background-color 0.3s; }
+        .btn-primary:hover { background-color: #0056b3; }
+        .btn-outline-secondary { border-color: #2F3E46; color: #2F3E46; }
+        .btn-outline-secondary:hover { background-color: #2F3E46; color: #fff; }
+        .modal-header { border-bottom: none; }
+        .modal-footer { border-top: none; }
+        .case-study-card { border-left: 5px solid #007BFF; }
+        .footer { background-color: #2F3E46; color: #F4F4F8; padding: 40px 0; }
+        .footer a { color: #F4F4F8; text-decoration: none; font-size: 1.5rem; margin: 0 10px; transition: color 0.3s ease; }
+        .footer a:hover { color: #007BFF; }
+    </style>
+</head>
+<body>
+
+    <!-- Header/Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-weight: bold;">Trevor Janis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex ms-lg-3">
+                    <a href="#" class="text-dark me-3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="#" class="text-dark" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-header text-center">
+            <div class="container">
+                <h1 class="display-4" style="font-weight: 700;">My Work & Case Studies</h1>
+            </div>
+        </div>
+
+        <section class="container pb-5">
+            <div class="row g-4">
+                <!-- AI Case Study Project -->
+                <div class="col-lg-6">
+                    <div class="card project-card h-100 case-study-card">
+                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Case Study: Intelligent Chatbot</h5>
+                            <p class="card-text">Improving conversational flow and accuracy of a customer service AI through advanced prompt engineering.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal1">View Case Study</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Platform</h5>
+                            <p class="card-text">A full-stack e-commerce website built with React and Node.js, featuring a clean user interface.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 3 -->
+                <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Visualization Dashboard</h5>
+                            <p class="card-text">An interactive dashboard for visualizing complex datasets using D3.js and Python.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 4 -->
+                 <div class="col-lg-6">
+                    <div class="card project-card h-100">
+                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile Weather App</h5>
+                            <p class="card-text">A cross-platform mobile app built with React Native that provides real-time weather forecasts.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal 1: AI Case Study -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">AI Case Study: Intelligent Chatbot</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/800x400" class="img-fluid mb-3" alt="Project Image">
+                    <h6>The Challenge</h6>
+                    <p>The initial AI chatbot often misunderstood user queries, providing generic or irrelevant answers to specific questions about product returns, leading to user frustration.</p>
+                    <h6>My Approach</h6>
+                    <p>I engineered a multi-step prompt strategy. First, I implemented a "system-level" prompt to define the AI's persona as a "helpful and precise customer service agent." Then, I used few-shot prompting, providing 3-4 examples of complex user queries and ideal answers. Finally, I instructed the AI to ask clarifying questions if the user's intent was ambiguous.</p>
+                    <h6>The Result</h6>
+                    <p>This approach reduced incorrect responses by over 70% in testing. The "before" output for "I want to return my shoes" was "Please see our return policy." The "after" output became "Of course, I can help with that. Could you please provide your order number so I can look up the return eligibility for your specific pair of shoes?"</p>
+                    <hr>
+                    <strong>Technologies Used:</strong> GPT-4 API, Python, Flask
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Live Demo</button>
+                    <button type="button" class="btn btn-outline-secondary">View on GitHub</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Placeholder Modals for other projects -->
+    <div class="modal fade" id="projectModal2" tabindex="-1"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">E-commerce Platform</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">Details for E-commerce Platform...</div></div></div></div>
+    <div class="modal fade" id="projectModal3" tabindex="-1"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Data Visualization Dashboard</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">Details for Data Visualization Dashboard...</div></div></div></div>
+    <div class="modal fade" id="projectModal4" tabindex="-1"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Mobile Weather App</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">Details for Mobile Weather App...</div></div></div></div>
+    
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-2"><strong>Trevor Janis</strong></p>
+            <p class="mb-3">your.email@example.com</p>
+            <div>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="mt-3 mb-0">&copy; 2025 Trevor Janis</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
